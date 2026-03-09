@@ -1,1 +1,40 @@
-🏆 Competitive Programming & AlgoritmosEste repositório é o meu cofre pessoal de algoritmos, estruturas de dados e resoluções de problemas focados em Programação Competitiva e maratonas de código. O objetivo aqui é treinar o raciocínio lógico, escrever códigos eficientes e dominar a análise de complexidade de tempo e espaço.🧠 O ObjetivoA programação competitiva não é sobre escrever o software mais bonito, mas sim o código mais rápido e eficiente para resolver problemas matemáticos e lógicos sob pressão de tempo. O foco principal é entender como transformar uma solução $O(N^2)$ em uma solução $O(N \log N)$ ou até mesmo $O(1)$.🗺️ Roteiro de Estudos (O que você vai encontrar aqui)Meus estudos e códigos estão divididos nos seguintes pilares fundamentais da ciência da computação:Estruturas de Dados Básicas: Arrays, Strings, Pilhas (Stacks), Filas (Queues) e Filas de Prioridade (Heaps).Teoria dos Números e Matemática: Crivo de Eratóstenes, MDC/MMC, Aritmética Modular e Exponenciação Rápida.Busca e Ordenação: Busca Binária (Binary Search), Two Pointers, Sliding Window e algoritmos de ordenação.Grafos e Árvores: Representação (Matriz/Lista de Adjacência), Buscas em Largura e Profundidade (BFS e DFS), Algoritmo de Dijkstra e Árvore Geradora Mínima (Kruskal/Prim).Programação Dinâmica (DP): Memoization, Tabulation, Problema da Mochila (Knapsack) e Longest Common Subsequence.💻 O Meu Setup e FerramentasPara garantir velocidade de digitação e execução, este é o meu ambiente de batalha:Linguagem Principal: C++ (A linguagem soberana na programação competitiva devido à velocidade e à biblioteca padrão STL).Ambiente: Terminal Linux / WSL.Compilação: GCC com flags de aviso ativadas (g++ -O2 -Wall -Wextra).Editor: Neovim ou VS Code com atalhos de teclado otimizados.🌐 Plataformas de TreinamentoMeus perfis e códigos resolvidos vêm principalmente das seguintes plataformas de Online Judges:Codeforces: Foco em campeonatos (Rounds) e problemas de alto nível lógico.LeetCode: Foco em preparação para entrevistas técnicas de emprego.CSES Problem Set: A melhor lista para aprender algoritmos clássicos do zero.Beecrowd (antigo URI): Plataforma brasileira, excelente para iniciantes pegarem a sintaxe da linguagem.
+🏆 Programação Competitiva & Algoritmos
+Este repositório é onde organizo meus estudos de Estruturas de Dados, Algoritmos e resoluções de problemas de Programação Competitiva. O objetivo principal é melhorar minha lógica, entender análise de complexidade (Big O) e manter um histórico da minha evolução.
+
+📌 Sobre o Repositório
+Aqui você encontrará minhas soluções para problemas de diversos Online Judges, além de implementações próprias de algoritmos clássicos. O foco é escrever códigos limpos e com a melhor eficiência de tempo e espaço possível.
+
+📂 Como está organizado
+Os códigos estão divididos de duas formas principais: por plataforma de exercícios e por tópicos de estudo da Ciência da Computação.
+
+/Plataformas:
+
+Codeforces/: Problemas resolvidos em rounds ou no problemset.
+
+LeetCode/: Foco em problemas clássicos de entrevistas técnicas.
+
+CSES/: Soluções para a clássica lista do CSES Problem Set.
+
+/Algoritmos_e_Estruturas:
+
+Matematica/: Teoria dos Números, Crivo, Exponenciação Rápida.
+
+Grafos/: BFS, DFS, Dijkstra, Árvores.
+
+Programacao_Dinamica/: Problemas de otimização, Knapsack.
+
+Busca_Ordenacao/: Busca Binária, Two Pointers.
+
+🛠️ Tecnologias e Compilação
+A linguagem principal utilizada nestes estudos é o C++, aproveitando a velocidade da linguagem e as estruturas prontas da STL (Standard Template Library).
+
+Para compilar e rodar qualquer arquivo localmente via terminal, utilizo o GCC. Exemplo:
+
+Bash
+# Compilando com flags de otimização e avisos
+g++ -O2 -Wall arquivo.cpp -o executavel
+
+# Executando o código
+./executavel
+🚀 Meu Template Base
+Para ganhar tempo durante competições, utilizo um boilerplate (template) padrão no início de cada código que otimiza a leitura e escrita de dados no terminal (Fast I/O). Ele fica salvo no arquivo template.cpp na raiz deste repositório.
