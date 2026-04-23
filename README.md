@@ -1,6 +1,3 @@
-Com certeza! Como você é estudante de CC na UnB, ter um README bem estruturado no seu GitHub é o que vai te destacar em processos seletivos e até pra você não se perder nas matérias de Algoritmos e ED.
-
-Aqui está um modelo focado no que você está estudando (C, Ponteiros, Alocação Dinâmica e Structs), seguindo a pegada "papo direto" que a gente teve.
 🚀 Estudo de Estruturas de Dados em C
 
 Este repositório é destinado ao registro do meu aprendizado em Estruturas de Dados, focando em como o hardware lida com a memória e como podemos manipular isso usando a linguagem C.
