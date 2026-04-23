@@ -1,0 +1,17 @@
+Profissao* aloca_profissao(unsigned int tamanho_nome){ 
+    // 1. Você cria um ponteiro 'p'. Por enquanto, ele aponta para o "nada".
+    Profissao* p; 
+     
+    // 2. Aqui você pede memória para a estrutura Profissao.
+    // O sistema te dá um endereço (ex: 1000) e guarda em 'p'.
+    p = malloc(sizeof(Profissao)); 
+       
+    // 3. AQUI ESTÁ O PROBLEMA: Você pediu memória para o nome (ex: endereço 2000),
+    // mas em vez de guardar isso DENTRO da struct, você jogou o 2000 em cima do 1000.
+    // O endereço da struct (onde está o 'int codigo') sumiu! 
+    p = malloc(tamanho_nome); 
+     
+    // 4. Você retorna o endereço do nome, mas o sistema esperava uma struct.
+    // Quando ele tenta ler p->codigo, o programa trava (Segfault).
+    return p; 
+}
