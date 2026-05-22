@@ -1,0 +1,43 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct No {
+    int id;
+    struct No* prox;   
+}No;
+void inserir(No* cabeca, int id){
+No* novo = (No*)malloc(sizeof(No*));
+
+novo->prox = NULL;
+novo->id = id;
+
+No* atual = cabeca;
+while(atual->prox != NULL){
+atual = atual->prox;
+}
+atual->prox = NULL;
+}
+void comparar(a, in){
+    
+}
+
+int main(){
+No* cabeca  = NULL;
+int i= 1;
+char in[] = "INSERIR";
+char r[] = "REMOVER";
+char im[]= "IMPRIMIR";
+int n;
+while(i){
+char a[50];
+
+    scanf("%s %d", &a, &n);
+
+    if(comparar(a, in))
+
+inserir(&cabeca, n);
+
+}
+    return 0;
+}
