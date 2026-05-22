@@ -6,38 +6,88 @@ typedef struct No {
     int id;
     struct No* prox;   
 }No;
+
+void remover(No* cabeca, int id){
+    No* atual = cabeca->prox;
+    No* anterior = cabeca;
+
+    while(atual != NULL){
+        if(atual->id == id){
+            anterior->prox = atual->prox;
+            free(atual);
+            return;
+        }
+        anterior = atual; 
+        atual = atual->prox;
+    }
+}
+
 void inserir(No* cabeca, int id){
-No* novo = (No*)malloc(sizeof(No*));
+    No* novo = (No*)malloc(sizeof(No));
 
-novo->prox = NULL;
-novo->id = id;
+    novo->prox = NULL;
+    novo->id = id;
 
-No* atual = cabeca;
-while(atual->prox != NULL){
-atual = atual->prox;
+    No* atual = cabeca;
+
+    while(atual->prox != NULL){
+        atual = atual->prox;
+    }
+
+    atual->prox = novo;
 }
-atual->prox = NULL;
+
+int comparar(char a[],char in[]){
+    int i = 0;
+
+    while(a[i] == in[i] && a[i] != '\0'){
+        i++;
+    }
+    if(a[i] == in[i]){
+        return 1;
+    }else {
+        return 0;
+    }
 }
-void comparar(a, in){
-    
+void imprimir(No* cabeca){
+    No* atual = cabeca->prox;
+    No* anterior;
+
+    while(atual != NULL){
+        anterior = atual;
+        atual = atual->prox;
+        printf("%d", anterior->prox);
+        free(anterior);
+    }
 }
 
 int main(){
-No* cabeca  = NULL;
-int i= 1;
-char in[] = "INSERIR";
-char r[] = "REMOVER";
-char im[]= "IMPRIMIR";
-int n;
-while(i){
-char a[50];
+    No* cabeca  = NULL;
 
-    scanf("%s %d", &a, &n);
+    int i = 1;
+    char in[] = "INSERIR";
+    char r[] = "REMOVER";
+    char im[]= "IMPRIMIR";
 
-    if(comparar(a, in))
 
-inserir(&cabeca, n);
+    while(i){
+        char a[50];
+        int n;
+        
+        scanf("%s", a);
 
-}
+        if(comparar(a, in)){
+            scanf("%d", &n);
+            inserir(cabeca, n);
+        }
+        else if(comparar(a, r)){
+            scanf("%d", &n);
+            remover(cabeca, n);
+        }else if(comparar(a, im)){
+            imprimir(cabeca);
+            return 0;
+        }
+
+    }
     return 0;
 }
