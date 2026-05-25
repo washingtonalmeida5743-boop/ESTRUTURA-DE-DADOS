@@ -10,13 +10,15 @@ typedef struct no{
 no* criarno(){
     int i =0;
     char a[] = "FANTASMA";
+    
     no* cabeca = (no*) malloc(sizeof(no));
     
-    while (a[i]!= '\0'){
-    cabeca->url[i] = a[i];
-    i++;
-    }
-    cabeca->url[i] = '\0';
+        while (a[i]!= '\0'){
+        cabeca->url[i] = a[i];
+        i++;
+        }
+        
+        cabeca->url[i] = '\0';
 
     cabeca->prox =NULL;
     return cabeca;
@@ -54,11 +56,31 @@ void atual(no* cabeca){
     if(cabeca->prox != NULL){
     //if(l != NULl)
 
-    printf("%s", cabeca->prox->url);
+    printf("%s\n", cabeca->prox->url);
     //printf("%s", l->prox);
     }else {
         printf("Nenhuma pagina\n");
     }
+}
+
+void voltar(no* cabeca){
+
+    if(cabeca->prox == NULL){
+        printf("Historico vazio\n");
+        return;
+    }
+
+    no* remover = cabeca->prox;
+    cabeca->prox = remover->prox;
+    
+    free(remover);
+
+    if(cabeca->prox == NULL){
+        printf("Historico vazio\n");
+    }
+    printf("Voltando para:%s\n", cabeca->prox->url);
+
+
 }
 
 int main(){
