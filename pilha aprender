@@ -1,0 +1,101 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct no{
+    char url[100];
+    struct no* prox;
+}no;
+
+no* criarno(){
+    int i =0;
+    char a[] = "FANTASMA";
+    no* cabeca = (no*) malloc(sizeof(no));
+    
+    while (a[i]!= '\0'){
+    cabeca->url[i] = a[i];
+    i++;
+    }
+    cabeca->url[i] = '\0';
+
+    cabeca->prox =NULL;
+    return cabeca;
+}
+
+int comparar(char a[],char in[]){
+    int i = 0;
+
+    while(a[i] == in[i] && a[i] != '\0'){
+        i++;
+    }
+    if(a[i] == in[i]){
+        return 1;
+    }else {
+        return 0;
+    }
+}
+void acessar(no* cabeca, char ur[]){
+    no* novo = (no*) malloc(sizeof(no));
+    int i=0;
+    
+    while(ur[i] != '\0'){
+        novo->url[i] = ur[i];
+        i++;
+    }
+    novo->url[i] = '\0';
+
+    novo->prox = cabeca->prox;
+    cabeca->prox = novo;
+}
+
+
+void atual(no* cabeca){
+    //no* l = cabeca->prox;
+    if(cabeca->prox != NULL){
+    //if(l != NULl)
+
+    printf("%s", cabeca->prox->url);
+    //printf("%s", l->prox);
+    }else {
+        printf("Nenhuma pagina\n");
+    }
+}
+
+int main(){
+
+    no* cabeca = criarno();
+    char in[] = "ACESSAR";
+    char r[] = "ATUAL";
+    char im[]= "VOLTAR";
+
+    while(1){
+        char a[100];
+
+       
+        if (scanf("%s", a) == EOF) {
+            break; 
+        }
+
+       
+        if(comparar(a, in)){
+           
+            char site[100];
+            
+         
+            scanf("%s", site);
+            
+          
+            acessar(cabeca, site);
+        }
+        else if(comparar(a, r)){
+           
+            atual(cabeca);
+        }
+        else if(comparar(a, im)){
+            
+            voltar(cabeca);
+        }
+    }
+
+    return 0;
+}
