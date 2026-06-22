@@ -1,0 +1,10 @@
+void mergeSort(int v[], int inicio, int fim){
+	int meio = floor(fim + inicio)/2 //floor arredonda o numero pra baixo
+	if(inicio < fim){
+		mergeSort(v, inicio, meio);
+		mergeSort(v, meio, fim);
+
+		merge(v, inicio, meio, fim);
+
+	}
+}
